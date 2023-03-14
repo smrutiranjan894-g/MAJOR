@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>z 
-        <script src="index.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        
         <title>VSSUT CSE</title>
+        <script src="index.js" async></script>
         <link rel="stylesheet" href="style.css">
         <link href="images/vssut.jpg" rel="icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,6 +54,7 @@
     
 <!-------------ABOUT---------->
 <section class="about">
+  
     <h1><b>ABOUT VSSUT AND COMPUTER SCEINCE AND ENGINEERING</b></h1>
     <br>
     <br>
@@ -63,198 +64,141 @@
     <br>
     <img src="images/comp_home.jpg" width="600px" height="400px">
     <img src="images/photo_1311130509060.jpg" width="600px" height="400px">
-</div>
+
 </section>
 <br>
 <br>
 
  
 <!-------------FACULTIES---------->
-<!-- <section class="faculties">
-    <h1>FACULTIES</h1>
-    <p>Faculties are the main reason behind the success of the department.</p>
-    <div class="row">
-      <div class="faculties-col">
-        <img src="${suvasini_panigrahi.Imagepath}">
-        <div>
-          <p>
-            <button class="collapsible">Details about the faculty</button>
-            <div class="content">
-              <p>${suvasini_panigrahi.Details}</p>
-            </div>
-          </p>
-          <h>${suvasini_panigrahi.Name}</h>
-        </div>
-      </div>
-      <div class="faculties-col">
-        <img src="${sumitra_kisan.Imagepath}">
-        <div>
-          <p>
-            <button class="collapsible">Details about the faculty</button>
-            <div class="content">
-              <p>${sumitra_kisan.Details}</p>
-            </div>
-          </p>
-          <h>${sumitra_kisan.Name}</h>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="faculties-col">
-        <img src="${santosh_majhi.Imagepath}">
-        <div>
-          <p>
-            <button class="collapsible">Details about the faculty</button>
-            <div class="content">
-              <p>${santosh_majhi.Details}</p>
-            </div>
-          </p>
-          <h>${santosh_majhi.Name}</h>
-        </div>
-      </div>
-      <div class="faculties-col">
-        <img src="${rakesh_mohanty.Imagepath}">
-        <div>
-          <p>
-            <button class="collapsible">Details about the faculty</button>
-            <div class="content">
-              <p>${rakesh_mohanty.Details}</p>
-            </div>
-          </p>
-          <h>${rakesh_mohanty.Name}</h>
-        </div>
-      </div>
-    </div>
-  </section>
-     -->
      <section class="faculties">
         <h1>FACULTIES</h1>
         <p>The main reason behind the success of our department</p>
         <div class="row">
           <div class="faculties-col">
-            <img src="${suvasini_panigrahi.Imagepath}">
+            <img src="images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg">
             <div>
               <p>
                 <button class="collapsible">Details about the faculty</button>
                 <div class="content">
-                  <p>${suvasini_panigrahi.Details}</p>
+                  <p>${suvasini_panigrahi.getDetails()}</p>
                 </div>
               </p>
-              <h>${suvasini_panigrahi.Name}</h>
+              <h>Dr. Suvasini Panigrahi</h>
             </div>
           </div>
           <div class="faculties-col">
-            <img src="${santosh_majhi.Imagepath}">
+            <img src="images/faculty_photos/santosh-kumar-majhi_photo1465444875.jpg">
             <div>
               <p>
                 <button class="collapsible">Details about the faculty</button>
                 <div class="content">
-                  <p>${santosh_majhi.Details}</p>
+                  <p>${santosh_majhi.getDetails()}</p>
                 </div>
               </p>
-              <h>${santosh_majhi.Name}</h>
+              <h>Dr. Santosh Kumar Majhi</h>
             </div>
           </div>
           <div class="faculties-col">
-              <img src="${alina_mishra.Imagepath}">
+              <img src="images/faculty_photos/alina-mishra1437673698.jpg">
               <div>
                   <p>
                       <button class="collapsible">Details about the faculty</button>
                       <div class="content">
-                          <p>${alina_mishra.Details}</p>
+                          <p>${alina_mishra.getDetails()}</p>
                         </div>
                     </p>
-                    <h>${alina_mishra.Name}</h>
+                    <h>Ms. Alina Mishra</h>
                 </div>
           </div>
         </div>
         <div class="row"> 
           <div class="faculties-col">
-            <img src="${santi_behera.Imagepath}">
+            <img src="images/faculty_photos/-mrs.santi-behera_photo1633751124.jpg">
             <div>
               <p>
                 <button class="collapsible">Details about the faculty</button>
                 <div class="content">
-                  <p>${santi_behera.Details}</p>
+                  <p>${santi_behera.getDetails()}</p>
                 </div>
               </p>
-              <h>${santi_behera.Name}</h>
+              <h>Dr. (Mrs.) Santi Behera</h>
             </div>
           </div>
           <div class="faculties-col">
-              <img src="${alina_dash.Imagepath}">
+              <img src="images/faculty_photos/alina-dash_photo1599172693.jpg">
               <div>
                   <p>
                       <button class="collapsible">Details about the faculty</button>
                       <div class="content">
-                          <p>${alina_dash.Details}</p>
+                          <p>Ms. Alina Dash</p>
                         </div>
                     </p>
-                    <h>${alina_dash.Name}</h>
+                    <h>Ms. Alina Dash</h>
                 </div>
           </div>
           <div class="faculties-col">
-            <img src="${manas_kabat.Imagepath}">
+            <img src="images/faculty_photos/sumitra-kisan1409966677.jpg">
             <div>
               <p>
                 <button class="collapsible">Details about the faculty</button>
                 <div class="content">
-                  <p>${manas_kabat.Details}</p>
+                  <p>${manas_kabat.getDetails()}</p>
                 </div>
               </p>
-              <h>${manas_kabat.Name}</h>
+              <h>Ms. Sumitra Kisan</h>
             </div>
           </div>
         </div>
         <div class="row"> 
             <div class="faculties-col">
-              <img src="${amiya_rath.Imagepath}">
+              <img src="images/faculty_photos/amiya_rath.jpg">
               <div>
                 <p>
                   <button class="collapsible">Details about the faculty</button>
                   <div class="content">
-                    <p>${amiya_rath.Details}</p>
+                    <p>${amiya_rath.getDetails()}</p>
                   </div>
                 </p>
-                <h>${amiya_rath.Name}</h>
+                <h>Prof. Amiya Kumar Rath</h>
               </div>
             </div>
             <div class="faculties-col">
-                <img src="${satya_prkash.Imagepath}">
+                <img src="images/faculty_photos/satya-prakash-sahoo.jpg">
                 <div>
                     <p>
                         <button class="collapsible">Details about the faculty</button>
                         <div class="content">
-                            <p>${satya_prkash.Details}</p>
+                            <p>${satya_prkash.getDetails()}</p>
                           </div>
                       </p>
-                      <h>${satya_prkash.Name}</h>
+                      <h>Mr. Satya Prakash Sahoo</h>
                   </div>
             </div>
             <div class="faculties-col">
-              <img src="${manas_kabat.Imagepath}">
+              <img src="images/faculty_photos/manas-ranjan-kabat_photo1648148453.jpg">
               <div>
                 <p>
                   <button class="collapsible">Details about the faculty</button>
                   <div class="content">
-                    <p>${manas_kabat.Details}</p>
+                    <p>${manas_kabat.getDetails()}</p>
                   </div>
                 </p>
-                <h>${manas_kabat.Name}</h>
+                <h>Prof. Manas Ranjan Kabat</h>
               </div>
             </div>
           </div>
         <div class="row"> 
             <div class="faculties-col">
-                <img src="${rakesh_mohanty.Imagepath}">
+                <img src="images/faculty_photos/rakesh-mohanty.jpg">
                 <div>
                   <p>
                     <button class="collapsible">Details about the faculty</button>
                     <div class="content">
-                      <p>${rakesh_mohanty.Details}</p>
+                      <p>${rakesh_mohanty.getDetails()}</p>
                     </div>
                   </p>
-                  <h>${rakesh_mohanty.Name}</h>
+                  <h>Dr. Rakesh Mohanty</h>
                 </div>
               </div>
   
@@ -275,17 +219,5 @@
     </div>
     <div class="credit">&copy; copyright @ 2022 by <span>NO ONE</span> | all rights reserved!</div>
 </section>
-<!-------------javascript for toggle menu-------------->
-        <script>
-            var navLinks = document.getElementById("navLinks");
-
-            function showMenu(){
-                navLinks.style.right="0px";
-            }
-            function hideMenu(){
-                navLinks.style.right="-200px";
-            }
-        </script>
-
     </body>
 </html>
