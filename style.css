@@ -105,6 +105,10 @@ nav img{
   background-color: #f1f1f1;
 }
 
+.content.active {
+  display: block;
+}
+
 /* Style the button */
 .collapsible {
     background-color: #eee;
@@ -197,6 +201,10 @@ p {
     padding: 25px;
     cursor: pointer;
     display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    width: 50%;
+    margin: 0 auto;      
 }
 .faculties-col img{
     height: 40px;

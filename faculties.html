@@ -1,6 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            // function toggleContent() {
+            //   const content = document.querySelector(".content");
+            //   content.classList.toggle("active");
+            // }
+          
+            function toggleContent(index) {
+            const content = document.getElementsByClassName("content")[index-1];
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          }
+          
+            const facultyList = [
+              {
+                name: "Prof. Amiya Kumar Rath",
+                designation: "Professor (On Deputation)",
+                photo: "images/faculty_photos/amiya_rath.jpg"
+              },
+              {
+                name: "Prof. Manas Ranjan Kabat",
+                designation: "Professor",
+                photo: "images/faculty_photos/manas-ranjan-kabat_photo1648148453.jpg"
+              },
+              {
+                name: "Dr. Rakesh Mohanty",
+                designation: "Associate Professor",
+                photo: "images/faculty_photos/rakesh-mohanty.jpg"
+              },
+              {
+                name: "Dr. Suvasini Panigrahi",
+                designation: "Associate Professor & Head",
+                photo: "images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg"
+              },
+              {
+                name: "Mr. Satya Prakash Sahoo",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/satya-prakash-sahoo.jpg"
+              },
+              {
+                name: "Ms. Sumitra Kisan",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+              },
+              {
+                name: "Dr. Santosh Kumar Majhi",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+              },
+              {
+                name: "Ms. ALINA MISHRA",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+              },
+              {
+                name: "Dr. (Mrs.) Santi Behera",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+              },
+              {
+                name: "Ms. Alina Dash",
+                designation: "Assistant Professor",
+                photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+              }]
+                  </script>
+          
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VSSUT CSE</title>
         <link rel="stylesheet" href="style.css">
@@ -44,70 +112,145 @@
             </p>
         </section>
         
-<section class="teachers" id="teachers">
-
-    <h1 class="heading"><span>FACULTIES</span></h1>
- 
-    <div class="swiper teachers-slider">
- 
-       <div class="swiper-wrapper">
- 
-          <div class="teachers-sort">
-             <img src="images/rakesh-mohanty.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>Dr. Rakesh Mohanty</h3>
-          </div>
-          
-          <div class="teachers-sort">
-             <img src="images/santosh-kumar-majhi_photo1465444875.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>Dr. Santosh Kumar Majhi</h3>
-          </div>
- 
-          <div class="teachers-sort">
-             <img src="images/suvasini-panigrahi_photo1483483429.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>	Dr. Suvasini Panigrahi</h3>
-          </div>
- 
-          <div class="teachers-sort">
-             <img src="images/satya-prakash-sahoo.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>Mr. Satya Prakash Sahoo</h3>
-          </div>
- 
-          <div class="teachers-sort">
-             <img src="images/sumitra-kisan1409966677.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>	Ms. Sumitra Kisan</h3>
-          </div>
- 
-          <div class="teachers-sort">
-             <img src="images/-mrs.santi-behera_photo1633751124.jpg" alt="">
-             <div class="share">
-                
-             </div>
-             <h3>Dr. (Mrs.) Santi Behera</h3>
-          </div>
- 
-       </div>
- 
-       <div class="swiper-pagination"></div>
- 
-    </div>
- 
- </section>
- 
+        <section class="faculties">
+            <h1>FACULTIES</h1>
+            <p>The main reason behind the success of our department</p>
+            <div class="row">
+              <div class="faculties-col">
+                <img src="images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg" width="40" height="100">
+                <div>
+                  <p>
+                    <button class="collapsible" onclick="toggleContent(1)">Details about the faculty</button>
+                    <div class="content">
+                      <p>${suvasini_panigrahi.getDetails()}</p>
+                    </div>
+                  </p>
+                  <h>Dr. Suvasini Panigrahi</h>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="faculties-col">
+                <img src="images/faculty_photos/santosh-kumar-majhi_photo1465444875.jpg">
+                <div>
+                  <p>
+                    <button class="collapsible" onclick="toggleContent(2)">Details about the faculty </button>
+                    <div class="content">
+                      <p>${santosh_majhi.getDetails()}</p>
+                    </div>
+                  </p>
+                  <h>Dr. Santosh Kumar Majhi</h>
+                </div>
+              </div>
+              <div class="faculties-col">
+                  <img src="images/faculty_photos/alina-mishra1437673698.jpg">
+                  <div>
+                      <p>
+                          <button class="collapsible" onclick="toggleContent(3)">Details about the faculty</button>
+                          <div class="content">
+                              <p>${alina_mishra.getDetails()}</p>
+                            </div>
+                        </p>
+                        <h>Ms. Alina Mishra</h>
+                    </div>
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="faculties-col">
+                <img src="images/faculty_photos/-mrs.santi-behera_photo1633751124.jpg">
+                <div>
+                  <p>
+                    <button class="collapsible" onclick="toggleContent(4)">Details about the faculty</button>
+                    <div class="content">
+                      <p>${santi_behera.getDetails()}</p>
+                    </div>
+                  </p>
+                  <h>Dr. (Mrs.) Santi Behera</h>
+                </div>
+              </div>
+              <div class="faculties-col">
+                  <img src="images/faculty_photos/alina-dash_photo1599172693.jpg">
+                  <div>
+                      <p>
+                          <button class="collapsible" onclick="toggleContent(5)">Details about the faculty</button>
+                          <div class="content">
+                              <p>Ms. Alina Dash</p>
+                            </div>
+                        </p>
+                        <h>Ms. Alina Dash</h>
+                    </div>
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="faculties-col">
+                <img src="images/faculty_photos/sumitra-kisan1409966677.jpg">
+                <div>
+                  <p>
+                    <button class="collapsible" onclick="toggleContent(6)">Details about the faculty</button>
+                    <div class="content">
+                      <p>${manas_kabat.getDetails()}</p>
+                    </div>
+                  </p>
+                  <h>Ms. Sumitra Kisan</h>
+                </div>
+              </div>
+              <div class="faculties-col">
+                <img src="images/faculty_photos/amiya_rath.jpg">
+                <div>
+                  <p>
+                    <button class="collapsible" onclick="toggleContent(7)">Details about the faculty</button>
+                    <div class="content">
+                      <p>${amiya_rath.getDetails()}</p>
+                    </div>
+                  </p>
+                  <h>Prof. Amiya Kumar Rath</h>
+                </div>
+              </div>
+            </div>
+            <div class="row"> 
+              <div class="faculties-col">
+                <img src="images/faculty_photos/satya-prakash-sahoo.jpg" alt="Satya Prakash Sahoo" title="Satya Prakash Sahoo" class="imgbor" width="90" height="90" border="0">
+                <!-- <img src="images/faculty_photos/satya-prakash-sahoo.jpg"> -->
+                    <div>
+                        <p>
+                            <button class="collapsible" onclick="toggleContent(8)">Details about the faculty</button>
+                            <div class="content">
+                                <p>${satya_prkash.getDetails()}</p>
+                              </div>
+                          </p>
+                          <h>Mr. Satya Prakash Sahoo</h>
+                      </div>
+                </div>
+                <div class="faculties-col">
+                  <img src="images/faculty_photos/manas-ranjan-kabat_photo1648148453.jpg">
+                  <div>
+                    <p>
+                      <button class="collapsible" onclick="toggleContent(9)">Details about the faculty</button>
+                      <div class="content">
+                        <p>${manas_kabat.getDetails()}</p>
+                      </div>
+                    </p>
+                    <h>Prof. Manas Ranjan Kabat</h>
+                  </div>
+                </div>
+              </div>
+            <div class="row"> 
+                <div class="faculties-col">
+                    <img src="images/faculty_photos/rakesh-mohanty.jpg">
+                    <div>
+                      <p>
+                        <button class="collapsible" onclick="toggleContent(10)">Details about the faculty</button>
+                        <div class="content">
+                          <p>${rakesh_mohanty.getDetails()}</p>
+                        </div>
+                      </p>
+                      <h>Dr. Rakesh Mohanty</h>
+                    </div>
+                  </div>
+      
+            </div>
+        </section>
+     
 
 <!--------------------footer------------->
 <section class="footer">

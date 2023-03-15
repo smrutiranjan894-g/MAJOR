@@ -4,6 +4,85 @@
         
         <title>VSSUT CSE</title>
         <script src="index.js" async></script>
+        <!-- <script>
+      const suvasini_panigrahi = {
+        getDetails: function() {
+          return "Dr. Suvasini Panigrahi is a professor of Computer Science with over 10 years of teaching experience.";
+        }
+      };
+  
+      function toggleContent() {
+        const content = document.querySelector(".content");
+        content.classList.toggle("active");
+      } -->
+      <script>
+  // function toggleContent() {
+  //   const content = document.querySelector(".content");
+  //   content.classList.toggle("active");
+  // }
+
+  function toggleContent(index) {
+  const content = document.getElementsByClassName("content")[index-1];
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
+}
+
+  const facultyList = [
+    {
+      name: "Prof. Amiya Kumar Rath",
+      designation: "Professor (On Deputation)",
+      photo: "images/faculty_photos/amiya_rath.jpg"
+    },
+    {
+      name: "Prof. Manas Ranjan Kabat",
+      designation: "Professor",
+      photo: "images/faculty_photos/manas-ranjan-kabat_photo1648148453.jpg"
+    },
+    {
+      name: "Dr. Rakesh Mohanty",
+      designation: "Associate Professor",
+      photo: "images/faculty_photos/rakesh-mohanty.jpg"
+    },
+    {
+      name: "Dr. Suvasini Panigrahi",
+      designation: "Associate Professor & Head",
+      photo: "images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg"
+    },
+    {
+      name: "Mr. Satya Prakash Sahoo",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/satya-prakash-sahoo.jpg"
+    },
+    {
+      name: "Ms. Sumitra Kisan",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+    },
+    {
+      name: "Dr. Santosh Kumar Majhi",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+    },
+    {
+      name: "Ms. ALINA MISHRA",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+    },
+    {
+      name: "Dr. (Mrs.) Santi Behera",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+    },
+    {
+      name: "Ms. Alina Dash",
+      designation: "Assistant Professor",
+      photo: "images/faculty_photos/sumitra-kisan1409966677.jpg"
+    }]
+        </script>
+        
         <link rel="stylesheet" href="style.css">
         <link href="images/vssut.jpg" rel="icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,140 +150,37 @@
 
  
 <!-------------FACULTIES---------->
-     <section class="faculties">
-        <h1>FACULTIES</h1>
-        <p>The main reason behind the success of our department</p>
-        <div class="row">
-          <div class="faculties-col">
-            <img src="images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg">
-            <div>
-              <p>
-                <button class="collapsible">Details about the faculty</button>
-                <div class="content">
-                  <p>${suvasini_panigrahi.getDetails()}</p>
-                </div>
-              </p>
-              <h>Dr. Suvasini Panigrahi</h>
-            </div>
-          </div>
-          <div class="faculties-col">
-            <img src="images/faculty_photos/santosh-kumar-majhi_photo1465444875.jpg">
-            <div>
-              <p>
-                <button class="collapsible">Details about the faculty</button>
-                <div class="content">
-                  <p>${santosh_majhi.getDetails()}</p>
-                </div>
-              </p>
-              <h>Dr. Santosh Kumar Majhi</h>
-            </div>
-          </div>
-          <div class="faculties-col">
-              <img src="images/faculty_photos/alina-mishra1437673698.jpg">
-              <div>
-                  <p>
-                      <button class="collapsible">Details about the faculty</button>
-                      <div class="content">
-                          <p>${alina_mishra.getDetails()}</p>
-                        </div>
-                    </p>
-                    <h>Ms. Alina Mishra</h>
-                </div>
-          </div>
-        </div>
-        <div class="row"> 
-          <div class="faculties-col">
-            <img src="images/faculty_photos/-mrs.santi-behera_photo1633751124.jpg">
-            <div>
-              <p>
-                <button class="collapsible">Details about the faculty</button>
-                <div class="content">
-                  <p>${santi_behera.getDetails()}</p>
-                </div>
-              </p>
-              <h>Dr. (Mrs.) Santi Behera</h>
-            </div>
-          </div>
-          <div class="faculties-col">
-              <img src="images/faculty_photos/alina-dash_photo1599172693.jpg">
-              <div>
-                  <p>
-                      <button class="collapsible">Details about the faculty</button>
-                      <div class="content">
-                          <p>Ms. Alina Dash</p>
-                        </div>
-                    </p>
-                    <h>Ms. Alina Dash</h>
-                </div>
-          </div>
-          <div class="faculties-col">
-            <img src="images/faculty_photos/sumitra-kisan1409966677.jpg">
-            <div>
-              <p>
-                <button class="collapsible">Details about the faculty</button>
-                <div class="content">
-                  <p>${manas_kabat.getDetails()}</p>
-                </div>
-              </p>
-              <h>Ms. Sumitra Kisan</h>
-            </div>
-          </div>
-        </div>
-        <div class="row"> 
-            <div class="faculties-col">
-              <img src="images/faculty_photos/amiya_rath.jpg">
-              <div>
-                <p>
-                  <button class="collapsible">Details about the faculty</button>
-                  <div class="content">
-                    <p>${amiya_rath.getDetails()}</p>
-                  </div>
-                </p>
-                <h>Prof. Amiya Kumar Rath</h>
-              </div>
-            </div>
-            <div class="faculties-col">
-                <img src="images/faculty_photos/satya-prakash-sahoo.jpg">
-                <div>
-                    <p>
-                        <button class="collapsible">Details about the faculty</button>
-                        <div class="content">
-                            <p>${satya_prkash.getDetails()}</p>
-                          </div>
-                      </p>
-                      <h>Mr. Satya Prakash Sahoo</h>
-                  </div>
-            </div>
-            <div class="faculties-col">
-              <img src="images/faculty_photos/manas-ranjan-kabat_photo1648148453.jpg">
-              <div>
-                <p>
-                  <button class="collapsible">Details about the faculty</button>
-                  <div class="content">
-                    <p>${manas_kabat.getDetails()}</p>
-                  </div>
-                </p>
-                <h>Prof. Manas Ranjan Kabat</h>
-              </div>
-            </div>
-          </div>
-        <div class="row"> 
-            <div class="faculties-col">
-                <img src="images/faculty_photos/rakesh-mohanty.jpg">
-                <div>
-                  <p>
-                    <button class="collapsible">Details about the faculty</button>
-                    <div class="content">
-                      <p>${rakesh_mohanty.getDetails()}</p>
-                    </div>
-                  </p>
-                  <h>Dr. Rakesh Mohanty</h>
-                </div>
-              </div>
+
   
-        </div>
-    </section>
-    
+<!-- <div class="faculties-col" >
+  <img src="" alt="Dr. Suvasini Panigrahi"
+    title="Dr. Suvasini Panigrahi">
+  <h4> <span>(HOD Computer Science &amp; Engineering)</span></h4>
+  <h5>Associate Professor &amp; Head</h5>
+  <p>
+    <a href="tel:0663-2430268(O)"><i class="fa fa-phone" aria-hidden="true"></i>0663-2430268(O)</a>
+    <a href="mailto:hod_cse@vssut.ac.in"><i class="fa fa-envelope" aria-hidden="true"></i>hod_cse@vssut.ac.in</a>
+  </p>
+</div> -->
+
+<div class="faculties-col">
+  <h2><span>HOD's Message</span></h2>
+
+
+<div class="hod">
+<div class="hod-dp"><img src="images/faculty_photos/suvasini-panigrahi_photo1483483429.jpg" alt="HOD CSE"></div>
+<div class="hod-details">
+<h4>Dr. Suvasini Panigrahi</h4>
+<h5>HOD, Computer Science</h5>
+h5>Associate Professor</h5>
+<p><!--<a href="tel:+919437572477">+91-9437572477</a>-->                 <a href="tel:(0663)-2430211">(0663)-2430211</a>                  <a href="mailto:vc@vssut.ac.in">vc@vssut.ac.in</a></p>
+<!--<div class="faculties-browse-profile" style="display:inline-block">--><!--<a href="http://vssut.ac.in/doc/VC_Message.pdf" target="_blank">--><!--<a href="http://www.vssut.ac.in/faculty-profile.php?furl=bibhuti-bhusan-pati" target="_blank">&raquo; Browse Profile</a></div>--></div>
+</div>
+</div>
+<div class="innerpage-box">
+<p>I feel proud to be a part of <strong>Veer Surendra Sai University of Technology (VSSUT), Odisha,</strong> situated at the foothill of world famous Hirakud dam, with a glorious history of more than half a century. The VSSUT, Odisha was formed in the year 2009 by converting University College of Engineering (UCE), the first Engineering College of Odisha, Burla to a non-affiliating Unitary University. Sprawling across 300 acres of sylvan surrounding it has a rich heritage of technical education. Here the young talents get ample opportunity to manifest their inner qualities. Faculty members are highly dedicated for building up their personality from humanitarian values to cosmopolitan outlook. All are marching towards forming a new India which will witness success in all spheres. With VSSUT, I firmly believe that the future technocrats of this institute will make India more vibrant and versatile spearheading towards growth.</p>
+</div>            
+
 <!--------------------footer------------->
 <section class="footer">
     <h3>About Us</h3>
@@ -215,7 +191,7 @@
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-linkedin"></i>`
+        <i class="fa-brands fa-linkedin"></i>
     </div>
     <div class="credit">&copy; copyright @ 2022 by <span>NO ONE</span> | all rights reserved!</div>
 </section>
