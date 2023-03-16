@@ -246,8 +246,10 @@ p {
 .innerpage-box{
     width: 80%;
     margin: auto;
+    margin-left: 90px;
+    margin-right: 190px;
     padding-top: 10px;
-    text-align: center;
+    text-align: left;
 }
 .layer {
     background: rgba(226,0,0,0.7);
