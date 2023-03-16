@@ -69,7 +69,7 @@ nav img{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 
 }  
   
@@ -243,6 +243,12 @@ p {
     border-radius: 50%;
 }
  
+.innerpage-box{
+    width: 80%;
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
 .layer {
     background: rgba(226,0,0,0.7);
     height: 100%;
